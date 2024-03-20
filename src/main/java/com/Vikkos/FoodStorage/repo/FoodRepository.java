@@ -5,10 +5,9 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 import java.util.Optional;
-import java.util.UUID;
 @Repository
-public interface FoodRepository extends JpaRepository<Food, UUID> {
+public interface FoodRepository extends JpaRepository<Food, String> {
     Optional<Food> findByName(String name);
-    Optional<Food> findByBarcode(Integer barcode);
+    Optional<Food> findByBarcode(String barcode);
 
 }
