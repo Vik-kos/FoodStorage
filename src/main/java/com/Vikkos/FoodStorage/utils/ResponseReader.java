@@ -37,6 +37,8 @@ public class ResponseReader {
         return jsonNode.path("product").path("product_name").asText();
     }
 
+    public String getBarcode() {return jsonNode.path("barcode").asText();}
+
 
 
 

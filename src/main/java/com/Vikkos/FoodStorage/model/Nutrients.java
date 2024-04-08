@@ -14,13 +14,11 @@ import lombok.Setter;
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class Nutrients {
 
-    //@JsonProperty("carbohydrates")
     private float carbohydrates;
 
     @JsonProperty("energy-kcal")
     private float energy_kcal;
 
-    @JsonProperty("fat")
     private float fat;
 
     @JsonProperty("saturated-fat")
@@ -28,19 +26,14 @@ public class Nutrients {
 
     private float unsaturated_fat;
 
-    @JsonProperty("fiber")
     private float fiber;
 
-    @JsonProperty("proteins")
     private float proteins;
 
-    @JsonProperty("salt")
     private float salt;
 
-    @JsonProperty("sodium")
     private float sodium;
 
-    @JsonProperty("sugars")
     private float sugars;
 
 

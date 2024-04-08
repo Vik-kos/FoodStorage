@@ -12,8 +12,6 @@ public class ApiRequester {
     private String API_url;
     private String filter;
     public String requestFoodInfo(String barcode) throws Exception {
-        //String API_url = "https://world.openfoodfacts.org/api/v2/product/";
-        //String filter = "?fields=product_name,nutriments,ingredients";
         HttpClient client = HttpClient.newHttpClient();
         HttpRequest request = HttpRequest.newBuilder()
                 .uri(URI.create(API_url + barcode + filter))

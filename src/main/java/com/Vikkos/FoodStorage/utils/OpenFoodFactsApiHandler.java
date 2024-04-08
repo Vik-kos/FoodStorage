@@ -25,12 +25,13 @@ public class OpenFoodFactsApiHandler {
             food.setIngredients(responseReader.getIngredients());
             food.setNutrients(responseReader.getNutrients());
             food.setName(responseReader.getName());
-        }
-        catch (Exception e){
             return Optional.of(food);
         }
+        catch (Exception e){
+            return Optional.empty();
+        }
 
 
-        return Optional.of(food);
+
     }
 }

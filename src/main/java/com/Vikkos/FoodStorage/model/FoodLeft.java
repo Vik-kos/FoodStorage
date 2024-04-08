@@ -1,9 +1,12 @@
 package com.Vikkos.FoodStorage.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+
+import java.util.UUID;
 
 @Getter
 @Setter
@@ -12,14 +15,18 @@ import lombok.Setter;
 public class FoodLeft {
 
     @Id
-    @GeneratedValue
-    private Long id;
+    //@GeneratedValue
+    private UUID id;
 
-    private String best_before_date;
+    private String bestBeforeDate;
 
-    private String amount;
+    private Float amount;
+
+    private String amountType;
 
     @ManyToOne
     @JoinColumn(name = "barcode")
+    @JsonIgnore
     private Food food;
+
 }
